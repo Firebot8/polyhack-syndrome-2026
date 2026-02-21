@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://bk175bur2780v" path="res://player.tscn" id="1_80nbo"]
 [ext_resource type="Texture2D" uid="uid://deqol2q7yy3aw" path="res://assets/Arcade - Pac-Man - Miscellaneous - General Sprites.png" id="2_e2o6t"]
 [ext_resource type="Texture2D" uid="uid://d4kpjvet6cyoa" path="res://assets/ghost_tp_anim-ezgif.com-gif-to-sprite-converter.png" id="3_feb5d"]
+[ext_resource type="Texture2D" uid="uid://b2dnbo8w7vvlw" path="res://assets/pac-man_running-ezgif.com-gif-to-sprite-converter.png" id="4_fc0e3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_feb5d"]
 texture = ExtResource("2_e2o6t")
@@ -2768,6 +2769,38 @@ region = Rect2(48, 80, 16, 16)
 atlas = ExtResource("3_feb5d")
 region = Rect2(64, 80, 16, 16)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_7jktm"]
+atlas = ExtResource("4_fc0e3")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ryrav"]
+atlas = ExtResource("4_fc0e3")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eow3j"]
+atlas = ExtResource("4_fc0e3")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j5wjh"]
+atlas = ExtResource("4_fc0e3")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vef74"]
+atlas = ExtResource("4_fc0e3")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hve3p"]
+atlas = ExtResource("4_fc0e3")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mfdv2"]
+atlas = ExtResource("4_fc0e3")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iotsf"]
+atlas = ExtResource("4_fc0e3")
+region = Rect2(32, 16, 16, 16)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_fc0e3"]
 animations = [{
 "frames": [{
@@ -2864,6 +2897,35 @@ animations = [{
 "loop": true,
 "name": &"death",
 "speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7jktm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ryrav")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eow3j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j5wjh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vef74")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hve3p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mfdv2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iotsf")
+}],
+"loop": true,
+"name": &"packman run",
+"speed": 30.0
 }]
 
 [node name="Game" type="Node2D" unique_id=2112717610]
@@ -2879,8 +2941,8 @@ layer_0/tile_data = PackedInt32Array(5, 1835023, 0, 65541, 1835023, 1, 131077, 1
 [node name="CharacterBody2D" parent="." unique_id=1351415048 instance=ExtResource("1_80nbo")]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1165511897]
-position = Vector2(9, 36)
+position = Vector2(105, -49)
 scale = Vector2(2.125, 2.125)
 sprite_frames = SubResource("SpriteFrames_fc0e3")
-animation = &"death"
-frame_progress = 0.7964677
+animation = &"packman run"
+frame_progress = 0.7165066
